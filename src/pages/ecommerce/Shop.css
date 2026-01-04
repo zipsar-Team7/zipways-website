@@ -1,0 +1,108 @@
+/* Shop Page Styles */
+
+.shop-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-8);
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  padding-right: var(--spacing-10);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 193, 148, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: var(--spacing-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-400);
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--color-gray-200);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-gray-600);
+}
+
+.filter-btn:hover {
+  background-color: var(--color-gray-100);
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.no-results {
+  padding: var(--spacing-12) 0;
+  color: var(--color-gray-500);
+}
+
+.no-results h3 {
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-2);
+}
+
+.no-results p {
+  margin-bottom: var(--spacing-6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shop-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar {
+    max-width: 100%;
+  }
+  
+  .category-filters {
+    overflow-x: auto;
+    padding-bottom: var(--spacing-2);
+  }
+}

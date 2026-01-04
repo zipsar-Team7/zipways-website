@@ -1,0 +1,68 @@
+/* Checkout Form Styles */
+
+.checkout-form {
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.checkout-form h3 {
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-lg);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding-bottom: var(--spacing-2);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.legal-section {
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-6) 0;
+  border: 1px solid var(--color-gray-200);
+}
+
+.legal-notice {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-3);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 4px;
+}
+
+.checkbox-group label {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+}
+
+.secure-badge {
+  text-align: center;
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

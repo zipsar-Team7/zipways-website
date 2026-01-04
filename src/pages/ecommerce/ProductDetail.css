@@ -1,0 +1,123 @@
+/* Product Detail Page Styles */
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: start;
+}
+
+.product-gallery {
+  position: sticky;
+  top: var(--spacing-24);
+}
+
+.main-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-gray-100);
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info-column {
+  padding: var(--spacing-4);
+}
+
+.product-header {
+  margin-bottom: var(--spacing-8);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding-bottom: var(--spacing-6);
+}
+
+.category-badge {
+  display: inline-block;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.product-description-section, 
+.product-features-section {
+  margin-bottom: var(--spacing-8);
+}
+
+.product-description-section h3,
+.product-features-section h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-3);
+}
+
+.feature-list-detailed {
+  list-style: none;
+}
+
+.feature-list-detailed li {
+  margin-bottom: var(--spacing-3);
+  padding-left: var(--spacing-6);
+  position: relative;
+  color: var(--color-gray-700);
+}
+
+.feature-list-detailed li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.product-meta {
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-8);
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta-label {
+  color: var(--color-gray-600);
+}
+
+.meta-value {
+  font-weight: var(--font-weight-medium);
+}
+
+.guarantee-text {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  margin-top: var(--spacing-4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .product-gallery {
+    position: static;
+  }
+}

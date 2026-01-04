@@ -1,0 +1,225 @@
+/* Home Page Styles */
+
+.home-page {
+  animation: fadeIn var(--transition-base);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: var(--spacing-12) 0;
+  background: linear-gradient(135deg, var(--color-gray-50) 0%, #E6FFFA 100%);
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  margin-bottom: var(--spacing-6);
+  line-height: 1.1;
+}
+
+.hero-description {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-8);
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+}
+
+.hero-trust {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.hero-trust::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-success);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+/* Hero Image */
+.hero-image {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  padding-left: var(--spacing-8);
+  z-index: 1;
+}
+
+.hero-image-placeholder {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform var(--transition-slow);
+}
+
+.hero-image-placeholder:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-8);
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-icon {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-4);
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-gray-50);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-3);
+}
+
+.service-description {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
+  flex-grow: 1;
+}
+
+.service-link {
+  font-weight: var(--font-weight-semibold);
+  margin-top: auto;
+}
+
+/* About Preview */
+.about-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-left: var(--spacing-2);
+}
+
+.feature-list li {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-image {
+    position: relative;
+    width: 100%;
+    transform: none;
+    padding-left: 0;
+    margin-top: var(--spacing-8);
+  }
+  
+  .hero-image-placeholder {
+    transform: none;
+  }
+  
+  .about-preview {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .feature-list {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8) var(--spacing-4);
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+  }
+  
+  .hero-actions button {
+    width: 100%;
+  }
+}

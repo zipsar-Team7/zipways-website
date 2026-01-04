@@ -1,0 +1,42 @@
+/* File Uploader Styles */
+
+.file-uploader-container {
+  margin-bottom: var(--spacing-8);
+}
+
+.file-upload-form {
+  height: 250px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  background-color: var(--color-gray-50);
+  border: 2px dashed var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.file-upload-form.drag-active {
+  background-color: #E6FFFA;
+  border-color: var(--color-primary);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-4);
+  color: var(--color-primary);
+}
+
+.upload-prompt p {
+  margin-bottom: var(--spacing-4);
+  color: var(--color-gray-600);
+}
+
+.upload-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  margin-top: var(--spacing-4) !important;
+}
