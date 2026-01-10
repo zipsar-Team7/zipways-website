@@ -114,9 +114,9 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                   >
-                    <option value="Sales">Sales & Inquiries (Pre-purchase)</option>
-                    <option value="Tech Support">Tech Support (Link issues)</option>
-                    <option value="Billing">Billing & Refunds</option>
+                    <option value="Sales">💼 Sales & Inquiries (Pre-purchase)</option>
+                    <option value="Tech Support">🔧 Tech Support (Link issues)</option>
+                    <option value="Billing">💳 Billing & Refunds</option>
                   </select>
                   <p className="form-help">
                     {formData.subject === 'Sales' && "For questions about our services and products."}

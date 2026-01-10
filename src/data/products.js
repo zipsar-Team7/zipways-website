@@ -78,3 +78,11 @@ export const formatCurrency = (amount, currency = 'INR') => {
     currency: currency,
   }).format(amount);
 };
+
+// Helper function to get recommended products
+export const getRecommendedProducts = (currentProductId, count = 3) => {
+  const otherProducts = products.filter(product => product.id !== currentProductId);
+  // Shuffle and return the requested count
+  return otherProducts.sort(() => Math.random() - 0.5).slice(0, count);
+};
+

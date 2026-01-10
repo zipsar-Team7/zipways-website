@@ -1,108 +1,153 @@
-/* Shop Page Styles */
+/* Shop Page - Dark Theme */
 
+.shop-page {
+  background: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+.shop-header {
+  background: linear-gradient(180deg, rgba(10, 30, 63, 0.3), transparent);
+  padding: 5rem 1rem 3rem;
+  margin-bottom: 3rem;
+}
+
+.shop-header h1 {
+  color: var(--color-text-primary);
+}
+
+.shop-header p {
+  color: var(--color-text-secondary);
+}
+
+/* Shop Controls */
 .shop-controls {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-8);
-  flex-wrap: wrap;
-  gap: var(--spacing-4);
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* Search Bar */
 .search-bar {
   position: relative;
+  max-width: 600px;
   width: 100%;
-  max-width: 400px;
 }
 
 .search-input {
   width: 100%;
-  padding: var(--spacing-3) var(--spacing-4);
-  padding-right: var(--spacing-10);
-  border: 1px solid var(--color-gray-300);
-  border-radius: var(--radius-full);
-  font-family: var(--font-family);
+  padding: 1rem 3rem 1rem 1.25rem;
+  background: rgba(10, 30, 63, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(191, 255, 153, 0.15);
+  border-radius: var(--radius-2xl);
+  color: var(--color-text-primary);
   font-size: var(--font-size-base);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-base);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .search-input:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 193, 148, 0.1);
+  border-color: rgba(191, 255, 153, 0.4);
+  background: rgba(10, 30, 63, 0.6);
+  box-shadow: 0 4px 16px rgba(191, 255, 153, 0.1);
 }
 
 .search-icon {
   position: absolute;
-  right: var(--spacing-4);
+  right: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-gray-400);
+  font-size: 1.25rem;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* Category Filters */
 .category-filters {
   display: flex;
-  gap: var(--spacing-2);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .filter-btn {
-  background: none;
-  border: 1px solid var(--color-gray-200);
-  padding: var(--spacing-2) var(--spacing-4);
-  border-radius: var(--radius-full);
-  font-family: var(--font-family);
+  padding: 0.75rem 1.5rem;
+  background: rgba(10, 30, 63, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(191, 255, 153, 0.15);
+  border-radius: var(--radius-xl);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: all var(--transition-fast);
-  color: var(--color-gray-600);
+  transition: all var(--transition-base);
 }
 
 .filter-btn:hover {
-  background-color: var(--color-gray-100);
+  background: rgba(10, 30, 63, 0.5);
+  border-color: rgba(191, 255, 153, 0.3);
+  color: var(--color-text-primary);
 }
 
 .filter-btn.active {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
+  background: rgba(191, 255, 153, 0.15);
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary);
 }
 
 /* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-8);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
 }
 
+/* No Results */
 .no-results {
-  padding: var(--spacing-12) 0;
-  color: var(--color-gray-500);
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
 .no-results h3 {
-  color: var(--color-gray-700);
-  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-2xl);
+  margin-bottom: 1rem;
 }
 
 .no-results p {
-  margin-bottom: var(--spacing-6);
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .shop-header {
+    padding: 4rem 1rem 2rem;
+  }
+
   .shop-controls {
-    flex-direction: column;
-    align-items: stretch;
+    gap: 1.5rem;
   }
-  
-  .search-bar {
-    max-width: 100%;
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
-  .category-filters {
-    overflow-x: auto;
-    padding-bottom: var(--spacing-2);
+
+  .filter-btn {
+    flex: 1;
+    min-width: 120px;
   }
 }

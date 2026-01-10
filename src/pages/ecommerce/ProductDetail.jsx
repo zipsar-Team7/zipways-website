@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { getProductById, formatCurrency } from '../../data/products';
+import { getProductById, formatCurrency, getRecommendedProducts } from '../../data/products';
 import { useCart } from '../../context/CartContext';
 import Button from '../../components/common/Button';
+import ProductCard from '../../components/ecommerce/ProductCard';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
@@ -10,6 +11,7 @@ const ProductDetail = () => {
   const { addToCart } = useCart();
   
   const product = getProductById(id);
+  const recommendedProducts = product ? getRecommendedProducts(id, 3) : [];
 
   if (!product) {
     return (
@@ -82,6 +84,20 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Recommendations Section */}
+      {recommendedProducts.length > 0 && (
+        <div className="recommendations-section">
+          <div className="container">
+            <h2 className="recommendations-title">You May Also Like</h2>
+            <div className="recommendations-grid">
+              {recommendedProducts.map((recommendedProduct) => (
+                <ProductCard key={recommendedProduct.id} product={recommendedProduct} />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

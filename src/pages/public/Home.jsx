@@ -176,12 +176,12 @@ const Home = () => {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="cta-content">
-          <h2 className="cta-title">Start creating clear, concise plans within minutes</h2>
+          <h2 className="cta-title">Ready to start your study abroad journey?</h2>
           <p className="cta-description">
-            Join hundreds of students who have successfully achieved their study abroad dreams with NPathways
+            Book a free consultation session with our expert counselors and get personalized guidance tailored to your goals
           </p>
           <button className="btn-primary">
-            Get Started for Free
+            Book Your Free Session
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
