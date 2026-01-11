@@ -1,24 +1,53 @@
+/* Card Component - Dark Theme */
+
 .card {
-  background-color: var(--color-white);
-  border-radius: var(--radius-xl);
+  background: rgba(10, 30, 63, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(191, 255, 153, 0.15);
+  border-radius: var(--radius-2xl);
   padding: var(--spacing-6);
   transition: all var(--transition-base);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .card-default {
-  box-shadow: var(--shadow-sm);
+  /* Default styling already applied above */
 }
 
 .card-bordered {
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid rgba(191, 255, 153, 0.2);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 0 1px rgba(191, 255, 153, 0.2);
 }
 
 .card-elevated {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(191, 255, 153, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-hoverable {
+  cursor: pointer;
 }
 
 .card-hoverable:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  cursor: pointer;
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(191, 255, 153, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(191, 255, 153, 0.3);
+  background: rgba(10, 30, 63, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: var(--spacing-4);
+  }
 }
