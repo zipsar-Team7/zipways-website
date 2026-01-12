@@ -28,7 +28,6 @@
   transform: translate(-50%, -50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(107, 141, 214, 0.3) 0%, rgba(198, 206, 240, 0.1) 40%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -118,7 +117,6 @@
 
 .vision-mission-section {
   padding: 5rem 0;
-  background: linear-gradient(180deg, transparent, rgba(10, 30, 63, 0.3), transparent);
 }
 
 .vision-mission-grid {
@@ -338,7 +336,6 @@
 
 .process-content:hover {
   transform: translateX(8px);
-  background: rgba(10, 30, 63, 0.9);
 }
 
 .process-content h4 {
@@ -361,7 +358,6 @@
 
 .impact-stats-section {
   padding: 5rem 0;
-  background: linear-gradient(180deg, rgba(10, 30, 63, 0.3), transparent);
 }
 
 .stats-grid-large {
@@ -438,7 +434,6 @@
 
 .testimonials-section {
   padding: 5rem 0;
-  background: linear-gradient(180deg, transparent, rgba(10, 30, 63, 0.3));
 }
 
 .testimonials-grid {
@@ -514,11 +509,6 @@
 
 .about-cta-section {
   padding: 6rem 2rem;
-  background: radial-gradient(ellipse at center, 
-    rgba(107, 141, 214, 0.2) 0%, 
-    rgba(198, 206, 240, 0.1) 30%, 
-    transparent 70%
-  );
   text-align: center;
 }
 

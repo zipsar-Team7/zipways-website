@@ -5,18 +5,15 @@
 }
 
 .welcome-banner {
-  background: linear-gradient(135deg, rgba(191, 255, 153, 0.2), rgba(198, 206, 240, 0.15));
+  background: var(--color-bg-secondary);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   color: var(--color-text-primary);
   padding: var(--spacing-10) var(--spacing-8);
   border-radius: var(--radius-2xl);
   margin-bottom: var(--spacing-10);
-  box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 1px rgba(191, 255, 153, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(191, 255, 153, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-gray-200);
   position: relative;
   overflow: hidden;
 }
@@ -28,7 +25,7 @@
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(191, 255, 153, 0.15) 0%, transparent 70%);
+  background: rgba(65, 100, 74, 0.05);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -61,7 +58,7 @@
   display: flex;
   align-items: center;
   padding: var(--spacing-6);
-  background: rgba(10, 30, 63, 0.6);
+  background: var(--color-bg-secondary);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(191, 255, 153, 0.15);
   border-radius: var(--radius-2xl);
@@ -83,7 +80,7 @@
 .stat-icon-wrapper {
   font-size: 2.5rem;
   margin-right: var(--spacing-4);
-  background: linear-gradient(135deg, rgba(191, 255, 153, 0.15), rgba(198, 206, 240, 0.1));
+  background: rgba(65, 100, 74, 0.1);
   width: 60px;
   height: 60px;
   border-radius: var(--radius-xl);
@@ -91,7 +88,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(191, 255, 153, 0.2);
+  border: 1px solid var(--color-brand-primary);
 }
 
 .stat-content h3 {
@@ -124,7 +121,7 @@
 
 .recent-activity-section .card,
 .quick-actions-section .card {
-  background: rgba(10, 30, 63, 0.6);
+  background: var(--color-bg-secondary);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(191, 255, 153, 0.15);
   padding: var(--spacing-6);
@@ -172,7 +169,7 @@
 }
 
 .quick-action-card {
-  background: rgba(10, 30, 63, 0.5);
+  background: var(--color-gray-50);
   backdrop-filter: blur(10px);
   padding: var(--spacing-5);
   border-radius: var(--radius-xl);
@@ -192,7 +189,7 @@
   box-shadow: 
     0 8px 24px rgba(0, 0, 0, 0.3),
     0 0 16px rgba(191, 255, 153, 0.2);
-  background: rgba(10, 30, 63, 0.7);
+  background: var(--color-white);
 }
 
 .action-icon {
@@ -202,7 +199,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(191, 255, 153, 0.15), rgba(198, 206, 240, 0.1));
+  background: rgba(65, 100, 74, 0.1);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+  border: 1px solid var(--color-brand-primary);
+}
+
   border-radius: var(--radius-lg);
   flex-shrink: 0;
   border: 1px solid rgba(191, 255, 153, 0.2);

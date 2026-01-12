@@ -1,53 +1,80 @@
-/* Card Component - Dark Theme */
+/* Card Component - Simple Solid Design */
 
 .card {
-  background: rgba(10, 30, 63, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(191, 255, 153, 0.15);
+  background: #F5F5F5;
+  border: 1px solid #E8E8E8;
   border-radius: var(--radius-2xl);
   padding: var(--spacing-6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-base);
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.card-default {
-  /* Default styling already applied above */
+.card:hover {
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  margin-bottom: var(--spacing-4);
+}
+
+.card-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.card-body {
+  color: var(--color-text-secondary);
+}
+
+.card-footer {
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+/* Card Variants */
+.card-elevated {
+  background: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-flat {
+  background: #F5F5F5;
+  box-shadow: none;
+  border: 1px solid #E8E8E8;
 }
 
 .card-bordered {
-  border: 1px solid rgba(191, 255, 153, 0.2);
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.3),
-    0 0 1px rgba(191, 255, 153, 0.2);
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-shadow: none;
 }
 
-.card-elevated {
-  box-shadow: 
-    0 12px 32px rgba(0, 0, 0, 0.5),
-    0 0 1px rgba(191, 255, 153, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+/* Compact Card */
+.card-compact {
+  padding: var(--spacing-4);
 }
 
-.card-hoverable {
-  cursor: pointer;
+/* List Card */
+.card-list {
+  padding: 0;
+  overflow: hidden;
 }
 
-.card-hoverable:hover {
-  transform: translateY(-4px);
-  box-shadow: 
-    0 16px 40px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(191, 255, 153, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border-color: rgba(191, 255, 153, 0.3);
-  background: rgba(10, 30, 63, 0.7);
+.card-list-item {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--color-gray-200);
+  transition: background var(--transition-base);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .card {
-    padding: var(--spacing-4);
-  }
+.card-list-item:last-child {
+  border-bottom: none;
+}
+
+.card-list-item:hover {
+  background: #FFFFFF;
 }

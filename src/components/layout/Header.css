@@ -17,17 +17,20 @@
 .header-island {
   max-width: 1400px;
   margin: 0 auto;
-  background: rgba(5, 16, 35, 0.75);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-pill);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 2px 8px rgba(191, 255, 153, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all var(--transition-base) cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: var(--radius-3xl);
+  padding: var(--spacing-3) var(--spacing-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header.scrolled .header-island {
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Scrolled State - Compact Island */
@@ -36,7 +39,7 @@
 }
 
 .header.scrolled .header-island {
-  background: rgba(5, 16, 35, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: 
     0 8px 24px rgba(0, 0, 0, 0.6),
     0 2px 8px rgba(191, 255, 153, 0.2),
@@ -344,7 +347,7 @@
     top: 100px;
     left: 0.75rem;
     right: 0.75rem;
-    background: rgba(5, 16, 35, 0.98);
+    background: rgba(255, 255, 255, 1);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border: 1px solid var(--border-subtle);

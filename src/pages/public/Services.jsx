@@ -19,29 +19,34 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Consultancy Services */}
+      {/* Consultancy Services - Journey Timeline */}
       <section className="section">
         <div className="container">
           <div className="section-header text-center mb-12">
-            <h2 className="section-title">Consultancy Services</h2>
-            <p className="section-subtitle">Expert human-led guidance for personalized success</p>
+            <h2 className="section-title">Your Journey With Us</h2>
+            <p className="section-subtitle">Follow the path to your global education success</p>
           </div>
           
-          <div className="services-list">
-            {consultancyServices.map((service) => (
-              <div key={service.id} className="service-row">
-                <div className="service-icon-large">{service.icon}</div>
-                <div className="service-content">
-                  <h3>{service.name}</h3>
-                  <p className="description">{service.description}</p>
+          <div className="journey-timeline">
+            {consultancyServices.map((service, index) => (
+              <div key={service.id} className={`journey-step ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="step-number">
+                  <span>Step {index + 1}</span>
+                </div>
+                
+                <div className="step-content">
+                  <div className="step-icon">{service.icon}</div>
+                  <h3 className="step-title">{service.name}</h3>
+                  <p className="step-description">{service.description}</p>
                   
-                  <div className="features-preview">
+                  <div className="features-list">
                     <h4>What's Included:</h4>
-                    <div className="features-tags">
-                      {service.features.map((feature, idx) => (
-                        <span key={idx} className="feature-tag">{feature}</span>
-                      ))}
-                    </div>
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="feature-item">
+                        <span className="checkmark">✓</span>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
                   </div>
                   
                   <Button variant="primary" onClick={() => window.location.href='/contact'}>
