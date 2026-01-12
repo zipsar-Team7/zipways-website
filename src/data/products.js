@@ -18,7 +18,7 @@ export const products = [
       'Initial career field suggestions',
       'Downloadable PDF analysis'
     ],
-    image: '/images/products/assessment-1.jpg'
+    image: 'https://picsum.photos/seed/assessment1/400/300'
   },
   {
     id: 'career-interest-mapping',
@@ -37,7 +37,7 @@ export const products = [
       'University major recommendations',
       'Industry trend alignment'
     ],
-    image: '/images/products/assessment-2.jpg'
+    image: 'https://picsum.photos/seed/assessment2/400/300'
   },
 
   // BOOTCAMPS
@@ -58,7 +58,7 @@ export const products = [
       'Academic goal setting',
       'Global university landscape overview'
     ],
-    image: '/images/products/bootcamp-1.jpg'
+    image: 'https://picsum.photos/seed/bootcamp1/400/300'
   },
 
   // PROGRAMS
@@ -79,7 +79,7 @@ export const products = [
       'Academic tracking',
       'Parent alignment sessions'
     ],
-    image: '/images/products/program-1.jpg'
+    image: 'https://picsum.photos/seed/program1/400/300'
   },
 
   // FULL PATHWAY PACKAGES
@@ -100,7 +100,7 @@ export const products = [
       'Application & SOP guidance',
       'Visa & transition support'
     ],
-    image: '/images/products/pathway-1.jpg'
+    image: 'https://picsum.photos/seed/pathway1/400/300'
   }
 ];
 

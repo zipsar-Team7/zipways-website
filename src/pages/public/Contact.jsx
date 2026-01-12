@@ -159,25 +159,6 @@ const Contact = () => {
                     required
                   ></textarea>
                 </div>
-
-                <div className="flex justify-center gap-6">
-                  <Button
-                    variant="premium"
-                    size="large"
-                    onClick={() => (window.location.href = "/contact")}
-                  >
-                    Talk to an Advisor
-                  </Button>
-                  <Button
-                    variant="premium-outline"
-                    size="large"
-                    onClick={() =>
-                      (window.location.href = "/services/assessments")
-                    }
-                  >
-                    Explore Tools
-                  </Button>
-                </div>
                 <Button variant="premium" type="submit" fullWidth size="large">
                   Send Message
                 </Button>

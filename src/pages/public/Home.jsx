@@ -137,22 +137,22 @@ const Home = () => {
             {[
               {
                 title: "Career Discovery",
-                icon: "🧭",
+                icon: "01",
                 desc: "Psychometric & Ikigai mapping",
               },
               {
                 title: "Admissions",
-                icon: "🎓",
+                icon: "02",
                 desc: "Expert university shortlisting",
               },
               {
                 title: "Visa Success",
-                icon: "🛂",
+                icon: "03",
                 desc: "98% success rate in filing",
               },
               {
                 title: "Support",
-                icon: "🏠",
+                icon: "04",
                 desc: "Arrival & accommodation help",
               },
             ].map((item, i) => (

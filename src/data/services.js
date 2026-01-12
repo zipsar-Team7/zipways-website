@@ -17,7 +17,7 @@ export const consultancyServices = [
   {
     id: 'global-education-consulting',
     name: 'Global Education Consulting',
-    icon: '🎓',
+    icon: null,
     shortDescription: 'University shortlisting and admission support',
     description: 'We guide students at every stage of their study abroad journey — from selecting the right universities to preparing standout SOPs and LORs, coaching for exams like IELTS, SAT, GRE, and TOEFL, helping secure scholarships, and managing visa applications.',
     features: [
@@ -34,7 +34,7 @@ export const consultancyServices = [
   {
     id: 'career-guidance',
     name: 'Career Guidance',
-    icon: '💼',
+    icon: null,
     shortDescription: '1-on-1 personalized strategy sessions',
     description: 'Personalized career counseling to help you discover your strengths, clarify your goals, and create an actionable roadmap for studying abroad.',
     features: [
@@ -50,7 +50,7 @@ export const consultancyServices = [
   {
     id: 'visa-assistance',
     name: 'Visa Assistance',
-    icon: '✈️',
+    icon: null,
     shortDescription: 'End-to-end documentation and filing support',
     description: 'Complete visa support including documentation review, application filing, interview preparation, and follow-up assistance.',
     features: [
@@ -69,7 +69,7 @@ export const supportServices = [
   {
     id: 'for-parents',
     name: 'For Parents',
-    icon: '👪',
+    icon: null,
     shortDescription: 'Safety and clarity for families.',
     description: 'Comprehensive orientation and support programs designed to help parents navigate the global education landscape with confidence.',
     longDescription: 'Studying abroad is a major family decision. We provide parents with the tools, information, and emotional support needed to ensure their child\'s safety, financial clarity, and academic success in a foreign land. Our sessions cover everything from choosing safe destinations to managing finances and cultural transitions.',
@@ -94,7 +94,7 @@ export const supportServices = [
   {
     id: 'for-schools',
     name: 'For Schools',
-    icon: '🏫',
+    icon: null,
     shortDescription: 'Institutional success and global exposure.',
     description: 'Strategic partnerships with schools to provide students with global career pathways and institutional growth opportunities.',
     longDescription: 'We partner with K-12 institutions to integrate global education readiness into their curriculum. From set-up of international wings to organizing global immersion programs and counselor training, we help schools become global hubs for student excellence.',
@@ -119,7 +119,7 @@ export const supportServices = [
   {
     id: 'career-assessments',
     name: 'Career & Assessments',
-    icon: '📊',
+    icon: null,
     shortDescription: 'Scientific path to career clarity.',
     description: 'In-depth psychometric tests and cognitive mapping to discover the ideal academic and career path.',
     longDescription: 'Our scientific assessments go beyond simple tests. We analyze personality traits, cognitive strengths, and interest patterns to map out a personalized success roadmap for students from Grade 8 onwards.',
@@ -144,7 +144,7 @@ export const supportServices = [
   {
     id: 'bootcamps',
     name: 'Bootcamps',
-    icon: '🚀',
+    icon: null,
     shortDescription: 'Intensive profile-building accelerators.',
     description: 'High-impact, short-term programs designed to build specific skills and professional profiles.',
     longDescription: 'Our bootcamps are intensive accelerators where students work on real-world projects, build portfolios, and interact with industry experts. Whether it\'s tech, business, or design, we provide the platform to go from concept to creation.',
@@ -169,7 +169,7 @@ export const supportServices = [
   {
     id: 'school-programs',
     name: 'School Programs',
-    icon: '🌟',
+    icon: null,
     shortDescription: 'Structured institutional engagements.',
     description: 'Long-term programs integrated with the school calendar for holistic student development.',
     longDescription: 'NPathways school programs are designed to be part of the academic ecosystem. We provide year-long guidance and activities that transform students from passive learners to global leaders.',

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { supportServices } from '../../../data/services';
-import Button from '../../../components/common/Button';
-import './ServiceDetails.css';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { supportServices } from "../../../data/services";
+import Button from "../../../components/common/Button";
+import "./ServiceDetails.css";
 
 const CareerAssessments = () => {
-  const service = supportServices.find(s => s.id === 'career-assessments');
+  const service = supportServices.find((s) => s.id === "career-assessments");
   const location = useLocation();
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -38,11 +38,13 @@ const CareerAssessments = () => {
             <div className="sidebar-widget">
               <h3 className="widget-title">All Services</h3>
               <ul className="sidebar-nav">
-                {supportServices.map(s => (
+                {supportServices.map((s) => (
                   <li key={s.id} className="sidebar-nav-item">
-                    <Link 
-                      to={s.link} 
-                      className={`sidebar-nav-link ${location.pathname === s.link ? 'active' : ''}`}
+                    <Link
+                      to={s.link}
+                      className={`sidebar-nav-link ${
+                        location.pathname === s.link ? "active" : ""
+                      }`}
                     >
                       {s.name}
                       <span>→</span>
@@ -54,8 +56,12 @@ const CareerAssessments = () => {
 
             <div className="sidebar-widget">
               <h3 className="widget-title">Sample Reports</h3>
-              <a href="#" className="download-item" onClick={(e) => e.preventDefault()}>
-                <div className="download-icon">📊</div>
+              <a
+                href="#"
+                className="download-item"
+                onClick={(e) => e.preventDefault()}
+              >
+                <div className="download-icon">PDF</div>
                 <div className="download-info">
                   <span className="download-name">Sample Strength Report</span>
                   <span className="download-size">PDF (3.2 MB)</span>
@@ -66,7 +72,11 @@ const CareerAssessments = () => {
             <div className="sidebar-widget contact-widget">
               <h3 className="widget-title">Ready to Begin?</h3>
               <p>Get scientific clarity on your career path today.</p>
-              <Button variant="outline" fullWidth onClick={() => window.location.href='/products/assessments'}>
+              <Button
+                variant="outline"
+                fullWidth
+                onClick={() => (window.location.href = "/products/assessments")}
+              >
                 View All Assessments
               </Button>
             </div>
@@ -74,16 +84,18 @@ const CareerAssessments = () => {
 
           {/* Main Content */}
           <main className="service-main-content">
-            <img 
-              src="https://images.unsplash.com/photo-1454165833762-010240aa7f06?q=80&w=2070&auto=format&fit=crop" 
-              alt="Career assessments" 
-              className="featured-image shadow-xl" 
+            <img
+              src="https://picsum.photos/seed/career/800/500"
+              alt="Career assessments"
+              className="featured-image shadow-xl"
             />
-            
+
             <section className="service-intro mb-12">
               <h2>{service.shortDescription}</h2>
-              <p className="text-xl text-gray-700 mb-8">{service.longDescription}</p>
-              
+              <p className="text-xl text-gray-700 mb-8">
+                {service.longDescription}
+              </p>
+
               <h3>Assessment Features</h3>
               <ul className="check-list space-y-4 mb-10">
                 {service.features.map((f, i) => (
@@ -112,14 +124,15 @@ const CareerAssessments = () => {
               <div className="faq-accordion">
                 {service.faq.map((item, index) => (
                   <div key={index} className="faq-item">
-                    <div className="faq-question" onClick={() => toggleFaq(index)}>
+                    <div
+                      className="faq-question"
+                      onClick={() => toggleFaq(index)}
+                    >
                       <span>{item.question}</span>
-                      <span>{openFaq === index ? '−' : '+'}</span>
+                      <span>{openFaq === index ? "−" : "+"}</span>
                     </div>
                     {openFaq === index && (
-                      <div className="faq-answer fade-in">
-                        {item.answer}
-                      </div>
+                      <div className="faq-answer fade-in">{item.answer}</div>
                     )}
                   </div>
                 ))}

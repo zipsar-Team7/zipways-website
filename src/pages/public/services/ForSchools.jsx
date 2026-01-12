@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { supportServices } from '../../../data/services';
-import Button from '../../../components/common/Button';
-import './ServiceDetails.css';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { supportServices } from "../../../data/services";
+import Button from "../../../components/common/Button";
+import "./ServiceDetails.css";
 
 const ForSchools = () => {
-  const service = supportServices.find(s => s.id === 'for-schools');
+  const service = supportServices.find((s) => s.id === "for-schools");
   const location = useLocation();
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -39,11 +39,13 @@ const ForSchools = () => {
             <div className="sidebar-widget">
               <h3 className="widget-title">All Services</h3>
               <ul className="sidebar-nav">
-                {supportServices.map(s => (
+                {supportServices.map((s) => (
                   <li key={s.id} className="sidebar-nav-item">
-                    <Link 
-                      to={s.link} 
-                      className={`sidebar-nav-link ${location.pathname === s.link ? 'active' : ''}`}
+                    <Link
+                      to={s.link}
+                      className={`sidebar-nav-link ${
+                        location.pathname === s.link ? "active" : ""
+                      }`}
                     >
                       {s.name}
                       <span>→</span>
@@ -56,15 +58,23 @@ const ForSchools = () => {
             {/* Download Widget */}
             <div className="sidebar-widget">
               <h3 className="widget-title">Partnership Docs</h3>
-              <a href="#" className="download-item" onClick={(e) => e.preventDefault()}>
-                <div className="download-icon">🏢</div>
+              <a
+                href="#"
+                className="download-item"
+                onClick={(e) => e.preventDefault()}
+              >
+                <div className="download-icon">PDF</div>
                 <div className="download-info">
                   <span className="download-name">Institutional Brochure</span>
                   <span className="download-size">PDF (4.1 MB)</span>
                 </div>
               </a>
-              <a href="#" className="download-item" onClick={(e) => e.preventDefault()}>
-                <div className="download-icon">🏢</div>
+              <a
+                href="#"
+                className="download-item"
+                onClick={(e) => e.preventDefault()}
+              >
+                <div className="download-icon">PDF</div>
                 <div className="download-info">
                   <span className="download-name">Partnership Models</span>
                   <span className="download-size">PDF (1.5 MB)</span>
@@ -75,8 +85,14 @@ const ForSchools = () => {
             {/* Help Widget */}
             <div className="sidebar-widget contact-widget">
               <h3 className="widget-title">Institutional Relations</h3>
-              <p>Connect with our team to start a partnership with your school.</p>
-              <Button variant="outline" fullWidth onClick={() => window.location.href='/contact'}>
+              <p>
+                Connect with our team to start a partnership with your school.
+              </p>
+              <Button
+                variant="outline"
+                fullWidth
+                onClick={() => (window.location.href = "/contact")}
+              >
                 Inquire Now
               </Button>
             </div>
@@ -84,16 +100,18 @@ const ForSchools = () => {
 
           {/* Main Content */}
           <main className="service-main-content">
-            <img 
-              src="https://images.unsplash.com/photo-1523050337458-5c56e75b08e2?q=80&w=2070&auto=format&fit=crop" 
-              alt="School partnership" 
-              className="featured-image shadow-xl" 
+            <img
+              src="https://picsum.photos/seed/schools/800/500"
+              alt="School partnership"
+              className="featured-image shadow-xl"
             />
-            
+
             <section className="service-intro mb-12">
               <h2>{service.shortDescription}</h2>
-              <p className="text-xl text-gray-700 mb-8">{service.longDescription}</p>
-              
+              <p className="text-xl text-gray-700 mb-8">
+                {service.longDescription}
+              </p>
+
               <h3>Institutional Features</h3>
               <ul className="check-list space-y-4 mb-10">
                 {service.features.map((f, i) => (
@@ -122,14 +140,15 @@ const ForSchools = () => {
               <div className="faq-accordion">
                 {service.faq.map((item, index) => (
                   <div key={index} className="faq-item">
-                    <div className="faq-question" onClick={() => toggleFaq(index)}>
+                    <div
+                      className="faq-question"
+                      onClick={() => toggleFaq(index)}
+                    >
                       <span>{item.question}</span>
-                      <span>{openFaq === index ? '−' : '+'}</span>
+                      <span>{openFaq === index ? "−" : "+"}</span>
                     </div>
                     {openFaq === index && (
-                      <div className="faq-answer fade-in">
-                        {item.answer}
-                      </div>
+                      <div className="faq-answer fade-in">{item.answer}</div>
                     )}
                   </div>
                 ))}

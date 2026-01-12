@@ -11,7 +11,7 @@ const Shop = () => {
       description:
         "Scientific map of cognitive patterns and personality traits to identify natural strengths. Start your journey with data, not best guesses.",
       link: "/products/assessments",
-      icon: "📊",
+      icon: "01",
       image:
         "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
     },
@@ -22,7 +22,7 @@ const Shop = () => {
       description:
         "Intensive accelerators designed to build specific readiness dimensions in record time. Close skill gaps with targeted intervention.",
       link: "/products/bootcamps",
-      icon: "🚀",
+      icon: "02",
       image:
         "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop",
     },
@@ -33,7 +33,7 @@ const Shop = () => {
       description:
         "Mid-term structured engagements focused on building core transition competencies over 3-6 months. Direct mentorship and tracking.",
       link: "/products/programs",
-      icon: "🏛️",
+      icon: "03",
       image:
         "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
     },
@@ -44,9 +44,9 @@ const Shop = () => {
       description:
         "End-to-end guided journey from assessment to enrollment in top-tier global institutions. Our flagship all-inclusive service.",
       link: "/products/pathways",
-      icon: "🗺️",
+      icon: "04",
       image:
-        "https://images.unsplash.com/photo-1524178232363-1fb2b075b955?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=2049&auto=format&fit=crop",
     },
     {
       id: "subscriptions",
@@ -55,7 +55,7 @@ const Shop = () => {
       description:
         "Long-term continuity and priority access for our global industry network. Stay connected with ongoing mentorship.",
       link: "/products/subscriptions",
-      icon: "📅",
+      icon: "05",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
       disabled: true,

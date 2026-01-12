@@ -1,6 +1,7 @@
 /* Service Details Layout - Replicating e.visa coaching-single structure in B&W */
 
 .service-detail-page {
+  padding-top: 80px;
   padding-bottom: 5rem;
   background-color: #fff;
 }
