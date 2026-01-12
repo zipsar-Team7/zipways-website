@@ -1,93 +1,224 @@
-import React from 'react';
-import { getProductsByCategory, formatCurrency } from '../../../data/products';
-import Button from '../../../components/common/Button';
-import Card from '../../../components/common/Card';
-import './CategoryPages.css';
+import React from "react";
+import { getProductsByCategory, formatCurrency } from "../../../data/products";
+import Button from "../../../components/common/Button";
+import ProductSidebar from "./ProductSidebar";
+import "./CategoryPages.css";
 
 const ProgramList = () => {
-  const programs = getProductsByCategory('Programs');
+  const programs = getProductsByCategory("Programs");
 
   return (
-    <div className="product-category-page programs-list fade-in">
-      <section className="section category-hero bg-gray">
-        <div className="container text-center">
-          <span className="category-tag">Phase 3: Execute</span>
-          <h1>Structured <span className="text-primary">Programs</span></h1>
-          <p className="max-w-2xl mx-auto text-lg text-gray-600">
-            Mid-term structured engagements designed to guide students through the complexities 
-            of transition and readiness at scale.
+    <div className="product-category-page fade-in">
+      <section className="bg-gray-50 py-20 text-center border-b border-gray-100">
+        <div className="container">
+          <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">
+            Phase 3
+          </span>
+          <h1 className="text-5xl font-bold mb-4">Structured Programs</h1>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            Mid-term engagements for sustained growth and mentorship.
           </p>
         </div>
       </section>
 
-      <section className="section">
+      <section className="service-single-layout">
         <div className="container">
-          <div className="grid grid-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="mb-6">When Programs are Recommended</h2>
-              <p className="text-gray-700 mb-6">
-                Programs are ideal for students who need more than a quick intervention. They 
-                provide the continuity and structural support needed to manage long-term 
-                academic and profile goals.
+          <div className="service-single-grid">
+            <ProductSidebar />
+
+            <div className="category-content">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
+                alt="Programs Overview"
+                className="category-hero-image"
+              />
+
+              <h2>Sustained Mentorship & Growth</h2>
+              <p className="lead">
+                Sometimes a short sprint isn't enough. Our structured programs
+                provide 3-6 months of continuous engagement, ensuring you stay
+                on track with your academic and extracurricular goals through
+                consistent mentorship.
               </p>
-              <div className="p-6 bg-black text-white rounded-2xl">
-                <h4 className="mb-4">Program Outcome Logic</h4>
-                <p className="text-sm text-gray-400">
-                  Assess {'->'} Align {'->'} Execute. Our programs ensure that the hard work of 
-                  preparation is done systematically, not frantically.
-                </p>
+
+              {/* Features Grid */}
+              <div className="features-grid-2">
+                <div className="feature-box">
+                  <h4>Regular Check-ins</h4>
+                  <p className="text-sm">
+                    Bi-weekly 1:1 sessions with your dedicated mentor to track
+                    progress and adjust strategies.
+                  </p>
+                </div>
+                <div className="feature-box">
+                  <h4>Progress Tracking</h4>
+                  <p className="text-sm">
+                    Quarterly reports on your readiness index and milestone
+                    achievements.
+                  </p>
+                </div>
+                <div className="feature-box">
+                  <h4>Resource Library</h4>
+                  <p className="text-sm">
+                    Unlimited access to templates, guides, and tools for essays,
+                    resumes, and more.
+                  </p>
+                </div>
+                <div className="feature-box">
+                  <h4>Expert Network</h4>
+                  <p className="text-sm">
+                    Connect with university alumni and industry professionals in
+                    your field of interest.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="bg-white p-8 border border-gray-100 rounded-3xl shadow-sm">
-              <h4 className="mb-6">Who should choose this?</h4>
-              <ul className="check-list space-y-4">
+
+              {/* Our Benefits */}
+              <h3 className="text-2xl font-bold mb-6 mt-12">
+                Program Benefits
+              </h3>
+              <ul className="benefits-list">
                 <li>
-                  <strong>Grade 10/11 Students:</strong> Who want to build a profile without burnout.
+                  <div className="icon">✓</div>
+                  <div className="text">
+                    <h5>Dedicated Advisor</h5>
+                    <p>
+                      One primary mentor who knows your journey intimately and
+                      guides you from start to finish.
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <strong>Institutional Partners:</strong> Schools looking for a standard framework for cohorts.
+                  <div className="icon">✓</div>
+                  <div className="text">
+                    <h5>Accountability Framework</h5>
+                    <p>
+                      Structured milestones and deadlines to keep you moving
+                      forward consistently.
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <strong>Career Switchers:</strong> Students moving to radically different global domains.
+                  <div className="icon">✓</div>
+                  <div className="text">
+                    <h5>Community Support</h5>
+                    <p>
+                      Join a cohort of students with similar goals for peer
+                      learning and motivation.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div className="icon">✓</div>
+                  <div className="text">
+                    <h5>Guaranteed Outcomes</h5>
+                    <p>
+                      90% of program graduates achieve their stated goals within
+                      the timeline.
+                    </p>
+                  </div>
                 </li>
               </ul>
+
+              {/* Process */}
+              <h3 className="text-2xl font-bold mb-6 mt-12">
+                How Our Programs Work
+              </h3>
+              <div className="process-steps">
+                <div className="process-step">
+                  <div className="step-number">1</div>
+                  <div className="step-content">
+                    <h4>Intake & Goal Setting</h4>
+                    <p>
+                      Complete assessment and define clear, measurable
+                      objectives with your advisor.
+                    </p>
+                  </div>
+                </div>
+                <div className="process-step">
+                  <div className="step-number">2</div>
+                  <div className="step-content">
+                    <h4>Customized Roadmap</h4>
+                    <p>
+                      Receive a personalized action plan with weekly and monthly
+                      milestones.
+                    </p>
+                  </div>
+                </div>
+                <div className="process-step">
+                  <div className="step-number">3</div>
+                  <div className="step-content">
+                    <h4>Execution & Support</h4>
+                    <p>
+                      Regular mentorship sessions, resource access, and
+                      continuous progress tracking.
+                    </p>
+                  </div>
+                </div>
+                <div className="process-step">
+                  <div className="step-number">4</div>
+                  <div className="step-content">
+                    <h4>Review & Next Steps</h4>
+                    <p>
+                      Quarterly evaluations and recommendations for continued
+                      growth beyond the program.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="mb-8 font-bold text-2xl mt-12">
+                Available Programs
+              </h3>
+
+              <div className="content-product-list">
+                {programs.map((item) => (
+                  <div key={item.id} className="product-list-item">
+                    <div>
+                      <h3>{item.name}</h3>
+                      <p className="text-gray-600 mb-4 text-sm">
+                        {item.description}
+                      </p>
+                      <div className="product-meta-row">
+                        <span>⏳ {item.duration}</span>
+                        <span>🔄 {item.deliveryModel}</span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end justify-between min-w-[140px]">
+                      <span className="text-xl font-bold">
+                        {formatCurrency(item.price)}
+                      </span>
+                      <Button
+                        variant="premium"
+                        size="medium"
+                        onClick={() =>
+                          (window.location.href = `/products/${item.id}`)
+                        }
+                      >
+                        View Details
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Contact CTA */}
+              <div className="contact-cta-box">
+                <h3>Not Sure Which Program Fits Your Needs?</h3>
+                <p>
+                  Let our advisors help you choose the right path based on your
+                  profile and goals.
+                </p>
+                <Button
+                  variant="premium-outline"
+                  size="large"
+                  onClick={() => (window.location.href = "/contact")}
+                  className="bg-white text-black border-2 border-white hover:bg-gray-200"
+                >
+                  Schedule a Consultation
+                </Button>
+              </div>
             </div>
-          </div>
-
-          <div className="product-grid">
-            {programs.map(item => (
-              <Card key={item.id} className="guided-product-card p-0 overflow-hidden">
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-6">
-                    <h3>{item.name}</h3>
-                    <span className="price-tag font-bold">{formatCurrency(item.price)}</span>
-                  </div>
-                  <p className="text-gray-600 mb-6">{item.description}</p>
-                  
-                  <div className="product-meta mb-8 space-y-3">
-                    <div className="meta-item">
-                      <span className="label">Target Audience:</span>
-                      <span className="value">{item.whoItIsFor}</span>
-                    </div>
-                    <div className="meta-item">
-                      <span className="label">Duration:</span>
-                      <span className="value">{item.duration}</span>
-                    </div>
-                    <div className="meta-item">
-                      <span className="label">Delivery Model:</span>
-                      <span className="value">{item.deliveryModel}</span>
-                    </div>
-                  </div>
-
-                  <Button variant="primary" fullWidth onClick={() => window.location.href=`/products/${item.id}`}>
-                    Explore Programs
-                  </Button>
-                </div>
-                <div className="card-footer bg-gray-50 p-4 text-center">
-                  <p className="text-xs text-gray-400">{item.whatItUnlocks}</p>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

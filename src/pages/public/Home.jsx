@@ -98,7 +98,7 @@ const Home = () => {
         </div>
 
         {/* Floating Course Finder */}
-        <div className="course-finder-container">
+        {/* <div className="course-finder-container">
           <div className="finder-card">
             <div className="finder-field">
               <label>Where to?</label>
@@ -123,7 +123,7 @@ const Home = () => {
             </div>
             <button className="finder-submit">Search Pathways</button>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Services Highlight - Tour Categories Style */}
@@ -212,8 +212,8 @@ const Home = () => {
                 From the first assessment to your first day abroad, we've
                 perfected every step of the process.
               </p>
-              <Link to="/about/how-it-works" className="btn-premium">
-                See The Roadmap
+              <Link to="/about/how-it-works">
+                <span style={{ color: "#fff" }}>See The Roadmap</span>
               </Link>
             </div>
             <div className="teaser-visual">
