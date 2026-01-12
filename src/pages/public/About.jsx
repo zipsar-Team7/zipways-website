@@ -153,7 +153,6 @@ const About = () => {
     { number: "50+", label: "University Partners" },
     { number: "15+", label: "Countries Covered" },
     { number: "24/7", label: "Support Available" },
-    { number: "95%", label: "Satisfaction Rate" }
   ];
 
   return (

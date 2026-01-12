@@ -26,7 +26,7 @@
 }
 
 .order-summary-card {
-  background: linear-gradient(135deg, rgba(10, 30, 63, 0.6), rgba(10, 30, 63, 0.4));
+  background: #F5F5F5;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(191, 255, 153, 0.15);
   border-radius: var(--radius-3xl);

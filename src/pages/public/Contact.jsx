@@ -45,7 +45,7 @@ const Contact = () => {
               </p>
               
               <div className="info-item">
-                <div className="info-icon">📍</div>
+                <div className="info-icon">L</div>
                 <div>
                   <h3>Headquarters</h3>
                   <p>123 Education Lane, Tech Park<br />Bangalore, KA 560001, India</p>
@@ -53,7 +53,7 @@ const Contact = () => {
               </div>
               
               <div className="info-item">
-                <div className="info-icon">📧</div>
+                <div className="info-icon">@</div>
                 <div>
                   <h3>Email Us</h3>
                   <p>info@npathways.global</p>
@@ -62,7 +62,7 @@ const Contact = () => {
               </div>
               
               <div className="info-item">
-                <div className="info-icon">📞</div>
+                <div className="info-icon">#</div>
                 <div>
                   <h3>Call Us</h3>
                   <p>+91 98765 43210</p>
@@ -114,9 +114,9 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                   >
-                    <option value="Sales">💼 Sales & Inquiries (Pre-purchase)</option>
-                    <option value="Tech Support">🔧 Tech Support (Link issues)</option>
-                    <option value="Billing">💳 Billing & Refunds</option>
+                    <option value="Sales">Sales & Inquiries (Pre-purchase)</option>
+                    <option value="Tech Support">Tech Support (Link issues)</option>
+                    <option value="Billing">Billing & Refunds</option>
                   </select>
                   <p className="form-help">
                     {formData.subject === 'Sales' && "For questions about our services and products."}
