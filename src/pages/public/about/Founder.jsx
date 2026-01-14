@@ -195,7 +195,7 @@ const Founder = () => {
                   style={{
                     fontSize: "3rem",
                     fontWeight: "800",
-                    color: "#eee",
+                    color: "#919191",
                     display: "block",
                     marginBottom: "1rem",
                   }}

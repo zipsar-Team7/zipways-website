@@ -56,6 +56,7 @@
 .about-section-header {
   margin-bottom: 4rem;
   text-align: center;
+  padding-top: 2rem; /* Give space for the badge and avoid header overlap */
 }
 
 .about-section-header .badge {
@@ -89,6 +90,29 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
+  align-items: start; /* Ensure cards align to top */
+}
+
+/* Specific grid for 4-column layouts like team members */
+.about-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.team-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.team-card-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 120px; /* Minimum height for text area to keep buttons/links aligned */
 }
 
 .about-grid-2 {
@@ -118,10 +142,38 @@
   color: var(--about-bg-dark);
 }
 
+/* --- Partners Banner --- */
+.partners-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  align-items: center;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.partner-logo-item {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+}
+
 /* --- Responsive --- */
 @media (max-width: 992px) {
-  .about-grid-3, .about-grid-2 {
+  .about-grid-3, .about-grid-4, .about-grid-2 {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-minimal {
+    padding: 4rem 0;
+  }
+  
+  .about-section-header h2 {
+    font-size: 2rem;
   }
 }

@@ -174,60 +174,59 @@ const About = () => {
             </p>
           </div>
 
-          <div
-            className="about-grid-3"
-            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
-          >
+          <div className="about-grid-4">
             {leadership.map((member, i) => (
-              <div
-                key={i}
-                className="team-card"
-                style={{ textAlign: "center" }}
-              >
-                <div
-                  style={{
-                    aspectRatio: "1/1",
-                    borderRadius: "12px",
-                    overflow: "hidden",
-                    marginBottom: "1.5rem",
-                    border: "1px solid #eee",
-                  }}
-                >
-                  <img
-                    src={member.img}
-                    alt={member.name}
+              <div key={i} className="team-card">
+                <div className="team-card-content">
+                  <div
                     style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      filter: "grayscale(100%)",
-                    }}
-                  />
-                </div>
-                <h4 style={{ margin: "0.5rem 0" }}>{member.name}</h4>
-                <p
-                  style={{
-                    color: "#888",
-                    fontSize: "0.9rem",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  {member.role}
-                </p>
-                {member.link !== "#" && (
-                  <Link
-                    to={member.link}
-                    style={{
-                      color: "#000",
-                      fontSize: "0.8rem",
-                      fontWeight: "bold",
-                      textDecoration: "none",
-                      borderBottom: "1px solid #000",
+                      aspectRatio: "1/1",
+                      borderRadius: "12px",
+                      overflow: "hidden",
+                      marginBottom: "1.5rem",
+                      border: "1px solid #eee",
                     }}
                   >
-                    View Bio
-                  </Link>
-                )}
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        filter: "grayscale(100%)",
+                      }}
+                    />
+                  </div>
+                  <div className="team-card-info">
+                    <h4 style={{ margin: "0.5rem 0" }}>{member.name}</h4>
+                    <p
+                      style={{
+                        color: "#888",
+                        fontSize: "0.9rem",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      {member.role}
+                    </p>
+                  </div>
+                  {member.link !== "#" && (
+                    <div style={{ marginTop: "auto" }}>
+                      <Link
+                        to={member.link}
+                        style={{
+                          color: "#000",
+                          fontSize: "0.8rem",
+                          fontWeight: "bold",
+                          textDecoration: "none",
+                          borderBottom: "1px solid #000",
+                        }}
+                      >
+                        View Bio
+                      </Link>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -243,28 +242,12 @@ const About = () => {
         }}
       >
         <div className="about-container">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              opacity: 0.5,
-              filter: "grayscale(100%)",
-            }}
-          >
-            {/* Logo placeholders - replicating the grayscale carousel */}
-            <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              UNIVERSITY PARTNER
-            </span>
-            <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              GLOBAL ACCREDITED
-            </span>
-            <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              EDUCATION FIRST
-            </span>
-            <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              CAREER HUB
-            </span>
+          <div className="partners-banner-grid">
+            {/* Logo placeholders with improved grid distribution */}
+            <div className="partner-logo-item">UNIVERSITY PARTNER</div>
+            <div className="partner-logo-item">GLOBAL ACCREDITED</div>
+            <div className="partner-logo-item">EDUCATION FIRST</div>
+            <div className="partner-logo-item">CAREER HUB</div>
           </div>
         </div>
       </section>
