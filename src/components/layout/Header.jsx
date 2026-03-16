@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useCart } from "../../context/CartContext";
+import {
+  FiShoppingCart,
+  FiUser,
+  FiMenu,
+  FiX,
+  FiChevronDown,
+} from "react-icons/fi";
 import "./Header.css";
 
 const Header = () => {
@@ -41,7 +48,7 @@ const Header = () => {
           <div className="header-content">
             {/* Logo */}
             <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>
-              <span className="logo-text">NPathways</span>
+              <span className="logo-text">Zipway</span>
               <span className="logo-subtitle">Global</span>
             </Link>
             {/* Desktop Navigation */}
@@ -64,7 +71,7 @@ const Header = () => {
                   className="nav-link dropdown-toggle"
                   onClick={(e) => handleDropdownToggle(e, "about")}
                 >
-                  About <span className="chevron">▾</span>
+                  About <FiChevronDown className="chevron" />
                 </Link>
                 <div className="dropdown-menu">
                   <div className="dropdown-category">
@@ -98,7 +105,7 @@ const Header = () => {
                   className="nav-link dropdown-toggle"
                   onClick={(e) => handleDropdownToggle(e, "services")}
                 >
-                  Services <span className="chevron">▾</span>
+                  Services <FiChevronDown className="chevron" />
                 </Link>
                 <div className="dropdown-menu">
                   <div className="dropdown-category">
@@ -150,7 +157,7 @@ const Header = () => {
                   className="nav-link dropdown-toggle"
                   onClick={(e) => handleDropdownToggle(e, "products")}
                 >
-                  Products <span className="chevron">▾</span>
+                  Products <FiChevronDown className="chevron" />
                 </Link>
                 <div className="dropdown-menu">
                   <div className="dropdown-category">
@@ -214,7 +221,7 @@ const Header = () => {
                 onClick={toggleCart}
                 aria-label="Shopping Cart"
               >
-                <span className="cart-icon">🛒</span>
+                <FiShoppingCart className="cart-icon" />
                 {getCartCount() > 0 && (
                   <span className="cart-badge">{getCartCount()}</span>
                 )}
@@ -223,7 +230,7 @@ const Header = () => {
               {/* User/Login */}
               {isAuthenticated ? (
                 <Link to="/dashboard" className="user-button">
-                  <span className="user-icon">👤</span>
+                  <FiUser className="user-icon" />
                   <span className="user-name">{user?.name}</span>
                 </Link>
               ) : (
@@ -238,7 +245,7 @@ const Header = () => {
                 onClick={toggleMenu}
                 aria-label="Toggle Menu"
               >
-                {isMenuOpen ? "✕" : "☰"}
+                {isMenuOpen ? <FiX /> : <FiMenu />}
               </button>
             </div>
           </div>

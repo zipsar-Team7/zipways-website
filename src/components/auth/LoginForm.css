@@ -100,11 +100,22 @@
 /* Mobile Responsive */
 @media (max-width: 480px) {
   .login-card {
-    padding: var(--spacing-6);
+    padding: var(--spacing-5);
     max-width: 100%;
+    margin: 0;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   .login-card h2 {
     font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-4);
+    text-align: left; /* Often looks better on mobile than center */
+  }
+
+  /* Make inputs easier to tap */
+  .form-input {
+    padding: var(--spacing-3);
+    font-size: 16px; /* Prevents auto-zoom on iOS */
   }
 }
