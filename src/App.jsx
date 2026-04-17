@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Cart from "./components/ecommerce/Cart";
 import LoadingScreen from "./components/common/LoadingScreen";
@@ -8,6 +9,7 @@ import PublicLayout from "./components/layout/PublicLayout";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 
 // Public Pages
+import LandingPage from "./pages/public/LandingPage";
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
 import Services from "./pages/public/Services";
@@ -55,6 +57,14 @@ const NotFound = () => (
 );
 
 function App() {
+  const [isUnlocked, setIsUnlocked] = useState(
+    localStorage.getItem("npathways_unlocked") === "true"
+  );
+
+  if (!isUnlocked) {
+    return <LandingPage onUnlock={() => setIsUnlocked(true)} />;
+  }
+
   return (
     <>
       <ScrollToTop />
