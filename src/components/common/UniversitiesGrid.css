@@ -1,0 +1,101 @@
+.universities-section {
+  padding: 6rem 0;
+  background-color: var(--bg-primary);
+}
+
+.uni-grid-creative {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+  margin-top: 2rem;
+}
+
+.uni-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  height: 300px;
+  cursor: pointer;
+}
+
+.uni-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.uni-card.large {
+  grid-row: span 2;
+  grid-column: span 2;
+  height: 616px;
+}
+
+.uni-card.medium {
+  grid-column: span 2;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .uni-card.large, .uni-card.medium, .uni-card.small {
+    grid-row: span 1;
+    grid-column: span 1;
+    height: 250px;
+  }
+}
+
+.uni-img-wrapper {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.uni-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.uni-card:hover .uni-img-wrapper img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.uni-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+}
+
+.uni-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.uni-location {
+  color: #a0aec0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.uni-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.uni-card.large .uni-name {
+  font-size: 2.25rem;
+}
