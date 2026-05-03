@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Button from "../../components/common/Button";
+import heroVideo from "../../assets/video/hero.mp4";
 import "./Home.css";
 
 const Home = () => {
@@ -42,6 +43,17 @@ const Home = () => {
     <div className="home-redesign">
       {/* Hero Section - Split Layout */}
       <section className="home-hero-premium">
+        <video
+          className="hero-video-bg"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="hero-overlay"></div>
+        
         <div className="container hero-split">
           <div className="hero-content-left">
             <span className="hero-badge-minimal">
@@ -80,19 +92,6 @@ const Home = () => {
               >
                 How It Works
               </Button>
-            </div>
-          </div>
-          <div className="hero-visual-right">
-            <div className="hero-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
-                alt="Student Success"
-                className="hero-main-img"
-              />
-              <div className="stats-nugget">
-                <span className="nugget-number">98%</span>
-                <span className="nugget-label">Visa Success</span>
-              </div>
             </div>
           </div>
         </div>
