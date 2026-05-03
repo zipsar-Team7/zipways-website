@@ -37,25 +37,13 @@ const About = () => {
   return (
     <div className="about-shared-page">
       {/* Hero Section */}
-      <section
-        className="about-hero-minimal"
-        style={{ backgroundColor: "#000", color: "#fff", padding: "10rem 0" }}
-      >
+      <section className="about-hero-minimal">
         <div className="about-container">
-          <div className="breadcrumbs" style={{ color: "#888" }}>
-            Home / About Us
-          </div>
-          <h1 style={{ color: "#fff" }}>
+          <div className="breadcrumbs">Home / About Us</div>
+          <h1>
             The Institute of <br /> <span>Global Pathways</span>
           </h1>
-          <p
-            style={{
-              color: "#888",
-              maxWidth: "600px",
-              margin: "2rem auto",
-              fontSize: "1.2rem",
-            }}
-          >
+          <p>
             A premium educational consultancy dedicated to transforming
             ambitious dreams into international realities.
           </p>
