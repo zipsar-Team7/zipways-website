@@ -263,7 +263,7 @@ const About = () => {
                 }}
               />
               <div style={{ padding: "3rem" }}>
-                <h3>Mission First</h3>
+                <h3 style={{ color: "#fff" }}>Mission First</h3>
                 <p style={{ color: "#888", marginTop: "1rem" }}>
                   We measure our success by the success of our students, not by
                   university commissions.
