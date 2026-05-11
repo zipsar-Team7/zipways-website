@@ -72,6 +72,7 @@ function App() {
           <Route path="/services/career-guidance" element={<CareerGuidance />} />
           <Route path="/services/visa-assistance" element={<VisaAssistance />} />
           <Route path="/services/bootcamps" element={<Bootcamps />} />
+          <Route path="/services/school-programs" element={<SchoolPrograms />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services/bootcamp-calendar" element={<BootcampList />} />
           <Route path="/products" element={<Navigate to="/services" replace />} />

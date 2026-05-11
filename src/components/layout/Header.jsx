@@ -147,6 +147,12 @@ const Header = () => {
                       >
                         Bootcamps
                       </Link>
+                      <Link
+                        to="/services/school-programs"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        School Programs
+                      </Link>
                     </div>
                   </div>
                 </div>
