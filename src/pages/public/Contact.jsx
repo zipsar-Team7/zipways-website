@@ -1,43 +1,16 @@
 import { useState } from "react";
 import Card from "../../components/common/Card";
 import Button from "../../components/common/Button";
+import LeadForm from "../../components/common/LeadForm";
 import faqsData from "../../data/faqs.json";
 import { FiChevronDown } from "react-icons/fi";
 import "./Contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    whatsapp: "",
-    qualification: "",
-    purpose: "Study Abroad",
-    goal: "",
-  });
-
   const [activeFaq, setActiveFaq] = useState(null);
 
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for contacting us! We will get back to you shortly.");
-    setFormData({
-      name: "",
-      email: "",
-      whatsapp: "",
-      qualification: "",
-      purpose: "Study Abroad",
-      goal: "",
-    });
   };
 
   return (
@@ -102,95 +75,7 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="contact-form-card">
               <h2>Send a Message</h2>
-              <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="form-input"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="form-input"
-                    placeholder="email@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="whatsapp">WhatsApp Number</label>
-                  <input
-                    type="tel"
-                    id="whatsapp"
-                    name="whatsapp"
-                    className="form-input"
-                    placeholder="+91 00000 00000"
-                    value={formData.whatsapp}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="qualification">Current Qualification</label>
-                  <input
-                    type="text"
-                    id="qualification"
-                    name="qualification"
-                    className="form-input"
-                    placeholder="e.g. 12th Grade, B.Tech"
-                    value={formData.qualification}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="purpose">Primary Purpose</label>
-                  <select
-                    id="purpose"
-                    name="purpose"
-                    className="form-select"
-                    value={formData.purpose}
-                    onChange={handleChange}
-                  >
-                    <option value="Study Abroad">Study Abroad</option>
-                    <option value="Bootcamps">Skills & Bootcamps</option>
-                    <option value="Internships">Internships & Research</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="goal">Long-term Goal</label>
-                  <textarea
-                    id="goal"
-                    name="goal"
-                    className="form-textarea"
-                    placeholder="Tell us about your ultimate career or academic goal..."
-                    rows="4"
-                    value={formData.goal}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
-                <Button variant="premium" type="submit" fullWidth size="large">
-                  Send Message
-                </Button>
-              </form>
+              <LeadForm source="Contact Page" variant="light" />
             </Card>
           </div>
         </div>

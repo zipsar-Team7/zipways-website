@@ -11,40 +11,14 @@ import trustBadgesData from "../../data/trustBadges.json";
 
 import "./Home.css";
 
+import LeadForm from "../../components/common/LeadForm";
+
 const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const [ctaForm, setCtaForm] = useState({
-    name: "",
-    email: "",
-    whatsapp: "",
-    qualification: "",
-    purpose: "Study Abroad",
-    goal: "",
-  });
-
-  const handleCtaChange = (e) => {
-    const { name, value } = e.target;
-    setCtaForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleCtaSubmit = (e) => {
-    e.preventDefault();
-    console.log("CTA Form submitted:", ctaForm);
-    alert("Thank you! We will contact you shortly.");
-    setCtaForm({
-      name: "",
-      email: "",
-      whatsapp: "",
-      qualification: "",
-      purpose: "Study Abroad",
-      goal: "",
-    });
-  };
 
   return (
     <div className="home-redesign">
@@ -224,82 +198,7 @@ const Home = () => {
               </div>
             </div>
             <div className="cta-form-box">
-              <form onSubmit={handleCtaSubmit}>
-                <div className="form-row">
-                  <div className="form-field">
-                    <label>Full Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={ctaForm.name}
-                      onChange={handleCtaChange}
-                      required
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label>Email Address</label>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="email@example.com"
-                      value={ctaForm.email}
-                      onChange={handleCtaChange}
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-field">
-                    <label>WhatsApp Number</label>
-                    <input
-                      type="tel"
-                      name="whatsapp"
-                      placeholder="+91 00000 00000"
-                      value={ctaForm.whatsapp}
-                      onChange={handleCtaChange}
-                      required
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label>Current Qualification</label>
-                    <input
-                      type="text"
-                      name="qualification"
-                      placeholder="e.g. 12th Grade, B.Tech"
-                      value={ctaForm.qualification}
-                      onChange={handleCtaChange}
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="form-field">
-                  <label>Primary Purpose</label>
-                  <select
-                    name="purpose"
-                    value={ctaForm.purpose}
-                    onChange={handleCtaChange}
-                  >
-                    <option value="Study Abroad">Study Abroad</option>
-                    <option value="Bootcamps">Skills & Bootcamps</option>
-                    <option value="Internships">Internships & Research</option>
-                  </select>
-                </div>
-                <div className="form-field">
-                  <label>Long-term Goal</label>
-                  <textarea
-                    name="goal"
-                    placeholder="Tell us about your ultimate career or academic goal..."
-                    value={ctaForm.goal}
-                    onChange={handleCtaChange}
-                    rows="3"
-                    required
-                  ></textarea>
-                </div>
-                <Button variant="premium" type="submit" fullWidth size="large">
-                  Get Free Consultation
-                </Button>
-              </form>
+              <LeadForm source="Home Page CTA" variant="dark" />
             </div>
           </div>
         </div>
