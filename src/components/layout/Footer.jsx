@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -9,8 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <span className="footer-logo-text">NPathways</span>
-              <span className="footer-logo-subtitle">Global</span>
+              <img src={logo} alt="NPathways Logo" style={{ height: "60px" }} />
             </Link>
             <p className="footer-description">
               Empowering Global Ambitions. We guide students at every stage of

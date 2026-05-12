@@ -22,6 +22,7 @@ import SchoolPrograms from "./pages/public/services/SchoolPrograms";
 import Contact from "./pages/public/Contact";
 import Founder from "./pages/public/about/Founder";
 import HowItWorks from "./pages/public/about/HowItWorks";
+import LandingPage from "./pages/public/LandingPage";
 
 // E-Commerce Pages
 import BootcampList from "./pages/public/services/BootcampCalendar";
@@ -50,7 +51,14 @@ const NotFound = () => (
 );
 
 function App() {
-  const isUnlocked = true;
+  const [isUnlocked, setIsUnlocked] = useState(
+    sessionStorage.getItem("site_unlocked") === "true"
+  );
+
+  const handleUnlock = () => {
+    sessionStorage.setItem("site_unlocked", "true");
+    setIsUnlocked(true);
+  };
 
 
 
@@ -59,9 +67,14 @@ function App() {
       <ScrollToTop />
       <LoadingScreen />
       <Routes>
+        {/* Landing Page - Standalone */}
+        {!isUnlocked && (
+          <Route path="/" element={<LandingPage onUnlock={handleUnlock} />} />
+        )}
+
         {/* Public Routes */}
         <Route element={<PublicLayout />}>
-          <Route path="/" element={<Home />} />
+          {isUnlocked && <Route path="/" element={<Home />} />}
           <Route path="/about" element={<About />} />
           <Route path="/about/founder" element={<Founder />} />
           <Route path="/about/how-it-works" element={<HowItWorks />} />

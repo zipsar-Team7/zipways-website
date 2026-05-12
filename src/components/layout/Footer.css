@@ -41,15 +41,19 @@
 
 .footer-logo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.25rem;
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
+.footer-logo img {
+  filter: grayscale(0) !important;
+}
+
 .footer-logo:hover {
-  transform: translateX(4px);
+  transform: scale(1.02);
 }
 
 .footer-logo-text {
